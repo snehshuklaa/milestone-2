@@ -1,0 +1,29 @@
+<!-- Student Mark Predictor App GUI-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    
+<body>
+    <!-- Form to get user input-->
+    <div style="color:pink">
+            <form action="{{ url_for('predict')}}" method="post">
+                <h2>Predictive analysis</h2>
+                <h3>Study Hours</h3>
+                <input name="study_hours" type="integer" placeholder="Enter the number of hours you spend studying" required="required" />
+                <br>
+                <br>
+                <!-- Show button -->
+                <button id="sub" type="submit ">Calculate the Marks </button>
+                <br>
+            </form>
+    
+    <!-- Display the output -->
+            <br><br><h2 class="output">{{ prediction_text }}</h2>
+    </div>
+
+</body>
+</html>
